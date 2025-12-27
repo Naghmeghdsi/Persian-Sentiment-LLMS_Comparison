@@ -69,7 +69,7 @@ Loads the Digikala sentiment dataset.
 
 Performs basic exploratory analysis (class distribution, text length, etc.).
 
-Creates stratified train / validation / test splits (e.g., 80/10/10).
+Creates stratified **train / validation / test** splits (e.g., 80/10/10).
 
 Optionally saves processed splits under data/.
 ---
