@@ -34,3 +34,26 @@ from datasets import load_dataset
 
 dataset = load_dataset("ParsiAI/digikala-sentiment-analysis")
 print(dataset)
+
+## 3. Repository Structure
+Persian_Sentiment_LLMS_Comparison/
+├── data/
+│   └── README.md              # Notes about the dataset source and splits
+├── notebooks/
+│   ├── 01_eda.ipynb           # EDA and creation of train/val/test splits
+│   ├── 02_prompt_baseline.ipynb
+│   │                           # Prompt-based baseline (no training)
+│   └── 03_peft_finetune.ipynb
+│                               # PEFT / LoRA fine-tuning experiments
+├── src/
+│   ├── dataset_utils.py       # Dataset loading, preprocessing, splitting
+│   ├── models.py              # Base model and PEFT configuration
+│   ├── train_peft.py          # Training loop for PEFT fine-tuning
+│   ├── eval_utils.py          # Metrics and evaluation helpers
+│   └── inference.py           # Inference on new Persian texts
+├── output/
+│   ├── models/                # Saved adapters / fine-tuned checkpoints
+│   └── reports/               # Metrics, plots, and analysis artifacts
+├── requirements.txt
+└── README.md
+
