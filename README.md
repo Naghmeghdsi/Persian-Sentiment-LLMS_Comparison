@@ -61,15 +61,15 @@ All experiments are designed to run on Google Colab or any similar environment w
 ### 4.1. Exploratory Data Analysis & Data Splits
 Run:
 
-notebooks/01_eda.ipynb
+`notebooks/01_eda.ipynb`
 
 This notebook:
 
-Loads the Digikala sentiment dataset.
+- Loads the Digikala sentiment dataset.
 
-Performs basic exploratory analysis (class distribution, text length, etc.).
+- Performs basic exploratory analysis (class distribution, text length, etc.).
 
-Creates stratified **train / validation / test** splits (e.g., 80/10/10).
+- Creates stratified **train / validation / test** splits (e.g., 80/10/10).
 
 Optionally saves processed splits under data/.
 
@@ -78,17 +78,17 @@ Optionally saves processed splits under data/.
 
 Run:
 
-notebooks/02_prompt_baseline.ipynb
+- `notebooks/02_prompt_baseline.ipynb`
 
 This notebook:
 
-Loads a multilingual or Persian pretrained transformer model from the Hugging Face Hub.
+- Loads a multilingual or Persian pretrained transformer model from the Hugging Face Hub.
 
-Designs Persian instruction / few-shot prompts for sentiment classification.
+- Designs Persian instruction / few-shot prompts for sentiment classification.
 
-Applies the prompts to the test set to predict sentiment labels.
+- Applies the prompts to the test set to predict sentiment labels.
 
-Computes Accuracy and macro F1-score.
+- Computes **Accuracy** and **macro F1-score**.
 
 This experiment serves as the zero-shot or few-shot baseline.
 
@@ -96,47 +96,47 @@ This experiment serves as the zero-shot or few-shot baseline.
 
 Run:
 
-notebooks/03_peft_finetune.ipynb
+- `notebooks/03_peft_finetune.ipynb`
 
 This notebook:
 
-Uses the same base model and tokenizer as the prompt baseline.
+- Uses the same base model and tokenizer as the prompt baseline.
 
-Configures a PEFT method (e.g., LoRA) to train only a small subset of parameters.
+- Configures a PEFT method (e.g., LoRA) to train only a small subset of parameters.
 
-Fine-tunes the model on the training split and tunes hyperparameters using the validation split.
+- Fine-tunes the model on the training split and tunes hyperparameters using the validation split.
 
-Evaluates on the test split using Accuracy and macro F1-score.
+- Evaluates on the test split using Accuracy and macro F1-score.
 
-Records additional information such as the number of trainable parameters and training time when available.
+- Records additional information such as the number of trainable parameters and training time when available.
 ---
 ### 5. Evaluation & Comparative Analysis
 
 Evaluation includes:
 
-Quantitative Metrics
+***Quantitative Metrics***
 
-Accuracy
+- Accuracy
 
-Precision, Recall
+- Precision, Recall
 
-Macro F1-score
+- Macro F1-score
 
-Qualitative Analysis
+***Qualitative Analysis***
 
-Examples of correctly and incorrectly classified reviews
+- Examples of correctly and incorrectly classified reviews
 
-Error analysis (e.g., irony, mixed sentiment, noisy or informal Persian text)
+- Error analysis (e.g., irony, mixed sentiment, noisy or informal Persian text)
 
-Comparison Dimensions
+***Comparison Dimensions***
 
-Prompt-based vs. PEFT approaches:
+- Prompt-based vs. PEFT approaches:
 
-Classification performance
+  - Classification performance
 
-Computational efficiency (training cost, parameter count)
+  - Computational efficiency (training cost, parameter count)
 
-Practical considerations (robustness, ease of use)
+  - Practical considerations (robustness, ease of use)
 
 The final report and presentation summarise the task, dataset, methods, results, limitations, and possible future improvements.
 ---
