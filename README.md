@@ -61,7 +61,7 @@ All experiments are designed to run on Google Colab or any similar environment w
 ### 4.1. Exploratory Data Analysis & Data Splits
 Run:
 
-`notebooks/01_eda.ipynb`
+- `notebooks/01_eda.ipynb`
 
 This notebook:
 
