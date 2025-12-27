@@ -72,4 +72,74 @@ Performs basic exploratory analysis (class distribution, text length, etc.).
 Creates stratified **train / validation / test** splits (e.g., 80/10/10).
 
 Optionally saves processed splits under data/.
+
+
+### 4.2. Prompt-Based Baseline (No Training)
+
+Run:
+
+notebooks/02_prompt_baseline.ipynb
+
+This notebook:
+
+Loads a multilingual or Persian pretrained transformer model from the Hugging Face Hub.
+
+Designs Persian instruction / few-shot prompts for sentiment classification.
+
+Applies the prompts to the test set to predict sentiment labels.
+
+Computes Accuracy and macro F1-score.
+
+This experiment serves as the zero-shot or few-shot baseline.
+
+### 4.3. PEFT / LoRA Fine-Tuning
+
+Run:
+
+notebooks/03_peft_finetune.ipynb
+
+This notebook:
+
+Uses the same base model and tokenizer as the prompt baseline.
+
+Configures a PEFT method (e.g., LoRA) to train only a small subset of parameters.
+
+Fine-tunes the model on the training split and tunes hyperparameters using the validation split.
+
+Evaluates on the test split using Accuracy and macro F1-score.
+
+Records additional information such as the number of trainable parameters and training time when available.
 ---
+### 5. Evaluation & Comparative Analysis
+
+Evaluation includes:
+
+Quantitative Metrics
+
+Accuracy
+
+Precision, Recall
+
+Macro F1-score
+
+Qualitative Analysis
+
+Examples of correctly and incorrectly classified reviews
+
+Error analysis (e.g., irony, mixed sentiment, noisy or informal Persian text)
+
+Comparison Dimensions
+
+Prompt-based vs. PEFT approaches:
+
+Classification performance
+
+Computational efficiency (training cost, parameter count)
+
+Practical considerations (robustness, ease of use)
+
+The final report and presentation summarise the task, dataset, methods, results, limitations, and possible future improvements.
+---
+### 6. Project Status
+
+This project is developed as part of an academic course and is currently under active development.
