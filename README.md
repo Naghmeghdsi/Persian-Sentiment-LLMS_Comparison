@@ -35,6 +35,7 @@ from datasets import load_dataset
 dataset = load_dataset("ParsiAI/digikala-sentiment-analysis")
 print(dataset)
 ```
+Train, validation, and test splits are created programmatically and used consistently across all experiments.
 ---
 ## 3. Setup & Installation
 
@@ -52,4 +53,23 @@ venv\Scripts\activate     # Windows
 ```bash
 
 pip install -r requirements.txt
+```
+All experiments are designed to run on Google Colab or any similar environment with access to a GPU.
+---
 
+### 4. How to Run the Experiments
+### 4.1. Exploratory Data Analysis & Data Splits
+Run:
+
+notebooks/01_eda.ipynb
+
+This notebook:
+
+Loads the Digikala sentiment dataset.
+
+Performs basic exploratory analysis (class distribution, text length, etc.).
+
+Creates stratified train / validation / test splits (e.g., 80/10/10).
+
+Optionally saves processed splits under data/.
+---
