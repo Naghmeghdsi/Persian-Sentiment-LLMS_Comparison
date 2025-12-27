@@ -34,6 +34,7 @@ from datasets import load_dataset
 
 dataset = load_dataset("ParsiAI/digikala-sentiment-analysis")
 print(dataset)
+```
 ---
 ## 3. Repository Structure
 Persian_Sentiment_LLMS_Comparison/
